@@ -1,4 +1,5 @@
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faUser } from "@fortawesome/free-solid-svg-icons"
 
 const Header = () => {
   return (
@@ -15,7 +16,7 @@ const Header = () => {
                 <li>About</li>
                 <li>Contact</li>
                 <li>
-                    <img src="" alt="" />
+                    <FontAwesomeIcon icon={faUser}  className="pr-2"/>
                     Sign in
                 </li>
             </ul>

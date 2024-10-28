@@ -3,12 +3,11 @@ import Header from "../Components/Header"
 // import Layout from "../Components/Layout"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
-import { faArrowUpRight } from '@fortawesome/free-solid-svg-icons'
-
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 
 const Home = () => {
   return (
-    <>
+    <div className="relative">
       <section className="hero-section relative">
         <div className="bg-[url('src/assets/Home-hero.jpg')] h-screen bg-cover bg-center">
           <Header />
@@ -63,19 +62,61 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section>
-        <div className="explore-brands">
-          <div>
-            <h2>Explore Our Premium Brands</h2>
-            <span className="all-brands-link">
-              Show all brands
-              <FontAwesomeIcon icon={faArrowUpRight} />
-            </span>
+      <section className="bg-[#F9FBFC] rounded-2xl relative -translate-y-5 left-1/2 -translate-x-1/2 w-full">
+        <div className="w-4/5 mx-auto">
+          <div className="explore-brands text-[#050B20] ">
+            <div className="flex justify-between py-10">
+              <h2 className="text-2xl font-semibold">Explore Our Premium Brands</h2>
+              <span className="all-brands-link flex gap-x-2">
+                <p className="text-sm">Show all brands</p>
+                <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+              </span>
+            </div>
+            <div className="brands flex justify-between py-10">
+              <div className="audi px-4 rounded-xl bg-white border w-fit">
+                <img src="src/assets/audi.jpg" alt="" />
+                <p className="text-center">Audi</p>
+              </div>
+              <div className="audi px-4 rounded-xl bg-white border w-fit">
+                <img src="src/assets/BMW.jpg" alt="" />
+                <p className="text-center">BMW</p>
+              </div>
+              <div className="audi px-4 rounded-xl bg-white border w-fit">
+                <img src="src/assets/Ford.jpg" alt="" />
+                <p className="text-center">Ford</p>
+              </div>
+              <div className="audi px-4 rounded-xl bg-white border w-fit">
+                <img src="src/assets/Benz.jpg" alt="" />
+                <p className="text-center">Mercedes-Benz</p>
+              </div>
+              <div className="audi px-4 rounded-xl bg-white border w-fit">
+                <img src="src/assets/Peugeot.jpg" alt="" />
+                <p className="text-center">Peugeot</p>
+              </div>
+              <div className="audi px-4 py-1 rounded-xl bg-white border w-fit">
+                <img src="src/assets/Volkswagen.jpg" alt="" />
+                <p className="text-center">Volkswagen</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+      <section>
+        <div className="explore-all-cars mx-auto w-4/5 flex justify-between items-center py-5">
+          <h2 className="text-2xl font-semibold">Explore All Cars</h2>
+          <span className="all-brands-link flex gap-x-2">
+                <p className="text-sm">View All</p>
+                <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+              </span>
+        </div>
+        <div className="car-tabs border-b mb-10 flex w-4/5 mx-auto gap-x-3">
+          <div className="border-b-2 border-blue-600">In Stock</div>
+          <div>New Cars</div>
+          <div>Used Cars</div>
+        </div>
+      </section>
       <Footer />
-    </>
+    </div>
   )
 }
 
